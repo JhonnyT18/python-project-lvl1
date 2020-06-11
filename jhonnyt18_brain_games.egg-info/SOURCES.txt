@@ -1,0 +1,8 @@
+brain_games/__init__.py
+brain_games/scripts/__init__.py
+brain_games/scripts/brain_games.py
+jhonnyt18_brain_games.egg-info/PKG-INFO
+jhonnyt18_brain_games.egg-info/SOURCES.txt
+jhonnyt18_brain_games.egg-info/dependency_links.txt
+jhonnyt18_brain_games.egg-info/entry_points.txt
+jhonnyt18_brain_games.egg-info/top_level.txt

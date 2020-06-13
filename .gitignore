@@ -1,5 +1,5 @@
-* .egg-info
+*.egg-info
 __pycache__
-dist /
-* .pyc
-.venv /
+dist/
+*.pyc
+.venv/

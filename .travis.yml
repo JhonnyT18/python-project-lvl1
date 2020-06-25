@@ -1,6 +1,6 @@
 language: python
 python:
-  # we want to test ur package on several versions of Python
+  # we want to test our package on several versions of Python
   - 3.6
 
 before_install:

@@ -15,14 +15,14 @@ def main():
     answers = ask.ask_to_user()
     counter = 1
     if answers[2] is False:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))
+        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))  # noqa: E501
     while answers[2] is True and counter < 3:
         answers = ask.ask_to_user()
         counter += 1
         if answers[2] is True and counter >= 3:
             print("Congretulations, " + name + "!")
         elif answers[2] is False:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))
+            print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))  # noqa: E501
 
 
 if __name__ == '__main__':

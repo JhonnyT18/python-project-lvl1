@@ -4,11 +4,12 @@
 # -*- coding: utf-8 -*-
 
 
+from brain_games import first_greet
 from brain_games import cli
 
 
 def main():
-    print('Welcome to the Brain Games!/n')
+    first_greet.greet()
     cli.welcome_user()
 
 

@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+
+
+# -*- coding: utf-8 -*-
+
+
+from brain_games import first_greet
+from brain_games import cli
+from brain_games import ask
+
+
+def main():
+    first_greet.greet()
+    name = cli.welcome_user()
+    answers = ask.ask_to_user()
+    counter = 1
+    if answers[2] is False:
+        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))
+    while answers[2] is True and counter < 3:
+        answers = ask.ask_to_user()
+        counter += 1
+        if answers[2] is True and counter >= 3:
+            print("Congretulations, " + name + "!")
+        elif answers[2] is False:
+            print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))
+
+
+if __name__ == '__main__':
+    main()

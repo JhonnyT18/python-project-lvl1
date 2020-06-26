@@ -5,3 +5,6 @@
 
 
 [![Build Status](https://travis-ci.com/JhonnyT18/python-project-lvl1.svg?branch=master)](https://travis-ci.com/JhonnyT18/python-project-lvl1)
+
+
+https://asciinema.org/a/whQ2w2Am4D41K6zUIsUXjNur7

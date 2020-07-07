@@ -7,4 +7,9 @@
 [![Build Status](https://travis-ci.com/JhonnyT18/python-project-lvl1.svg?branch=master)](https://travis-ci.com/JhonnyT18/python-project-lvl1)
 
 
+#example for brain-even:
 https://asciinema.org/a/whQ2w2Am4D41K6zUIsUXjNur7
+
+
+#example for brain-calc:
+https://asciinema.org/a/fFdZ4I3aiOwMomP6I1PcatWqy

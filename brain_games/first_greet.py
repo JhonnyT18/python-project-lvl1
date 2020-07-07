@@ -1,3 +1,9 @@
+welcome = 'Welcome to the Brain Games!'
+
 
 def greet():
-    print('Welcome to the Brain Games!\nAnswer "yes" if number even otherwise "no"')  # noqa: E501
+    print('{}\nAnswer "yes" if number even otherwise "no"'.format(welcome))
+
+
+def greet_for_calc():
+    print('{}\nWhat is the result of the expression?'.format(welcome))

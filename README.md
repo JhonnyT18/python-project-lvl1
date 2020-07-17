@@ -13,3 +13,7 @@ https://asciinema.org/a/whQ2w2Am4D41K6zUIsUXjNur7
 
 #example for brain-calc:
 https://asciinema.org/a/fFdZ4I3aiOwMomP6I1PcatWqy
+
+
+#example for brain-gcd:
+https://asciinema.org/a/Nd03ahTTd31KnCUdLK2LjFv7y

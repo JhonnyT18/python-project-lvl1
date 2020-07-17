@@ -33,8 +33,28 @@ def ask_for_calc():
     elif our_operator == ' * ':
         result = a * b
     answer = prompt.string('Your answer: ')
-    answers = [result, int(answer)]
+    answers = [str(result), answer]
     if answers[0] == answers[1]:
+        print('Correct!')
+        answers.append(True)
+    else:
+        answers.append(False)
+    return answers
+
+
+def GCD():
+    a = randint(0, 100)
+    b = randint(0, 100)
+    print('Question: {} {}'.format(a, b))
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+    result = a + b
+    answer = prompt.string('Your answer: ')
+    answers = [str(result), answer]
+    if answers[1] == answers[0]:
         print('Correct!')
         answers.append(True)
     else:

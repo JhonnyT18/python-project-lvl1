@@ -60,3 +60,29 @@ def GCD():
     else:
         answers.append(False)
     return answers
+
+
+def progression():
+    x = randint(1, 10)
+    result = []
+    for i in range(1, 100, x):
+        result.append(i)
+    progression = []
+    for i in range(10):
+        progression.append(result[i])
+    deleted_charecter = randint(0, 9)
+    correct_answer = progression[deleted_charecter]
+    progression.pop(deleted_charecter)
+    progression.insert(deleted_charecter, '..')
+    print('Question: ')
+    for i in progression:
+        print(i, end=' ')
+    print()
+    answer = input('Your answer: ')
+    answers = [str(correct_answer), answer]
+    if answers[0] == answers[1]:
+        print('Correct!')
+        answers.append(True)
+    else:
+        answers.append(False)
+    return answers

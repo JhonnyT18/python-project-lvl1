@@ -17,3 +17,6 @@ https://asciinema.org/a/fFdZ4I3aiOwMomP6I1PcatWqy
 
 #example for brain-gcd:
 https://asciinema.org/a/Nd03ahTTd31KnCUdLK2LjFv7y
+
+#example for brain-progression:
+https://asciinema.org/a/D8qQrNQylGcMHNzGTnokoZjvI

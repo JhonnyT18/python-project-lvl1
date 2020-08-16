@@ -86,3 +86,25 @@ def progression():
     else:
         answers.append(False)
     return answers
+
+
+def is_prime():
+    x = randint(2, 100)
+    print('Question: ' + str(x))
+    if x == 2:
+        correct_answer = 'yes'
+    else:
+        for i in range(2, x):
+            if x % i == 0:
+                correct_answer = 'no'
+                break
+            else:
+                correct_answer = 'yes'
+    answer = prompt.string('Your answer: ')
+    answers = [str(correct_answer), answer]
+    if answers[0] == answers[1]:
+        print('Correct!')
+        answers.append(True)
+    else:
+        answers.append(False)
+    return answers

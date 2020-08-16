@@ -10,7 +10,7 @@ from brain_games import ask
 
 
 def main():
-    first_greet.greet()
+    first_greet.greet_for_even()
     name = cli.welcome_user()
     answers = ask.ask_to_user()
     counter = 1

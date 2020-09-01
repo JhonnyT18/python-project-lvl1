@@ -13,13 +13,4 @@ def brain_progression():
     first_greet.greet_for_progression()
     name = cli.welcome_user()
     answers = ask.progression()
-    counter = 1
-    if answers[2] is False:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))  # noqa: E501
-    while answers[2] is True and counter < 3:
-        answers = ask.progression()
-        counter += 1
-        if answers[2] is True and counter >= 3:
-            print("Congretulations, " + name + "!")
-        elif answers[2] is False:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))  # noqa: E501
+    return name, answers

@@ -1,35 +1,37 @@
-#!/usr/bin/env python3
-
-
 # -*- coding: utf-8 -*-
 
 
-from brain_games.games import brain_calc
-from brain_games.games import brain_even
-from brain_games.games import brain_gcd
-from brain_games.games import brain_prime
-from brain_games.games import brain_progression
-from brain_games import ask
+import prompt
+from brain_games import cli
 
 
 def play_game(game):
-    name, answers = game()
+    print('Welcome to the Brain Games!')
+    QUESTION_STRING, question, correct_answer = game()
+    print(QUESTION_STRING)
+    name = cli.welcome_user()
+    print('Question: ' + question)
+    answer_of_user = prompt.string('You answer: ')
+    answers = [str(correct_answer), str(answer_of_user)]
+    if answers[1] == answers[0]:
+        answers.append(True)
+    else:
+        answers.append(False)
     counter = 1
     if answers[2] is False:
         print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))  # noqa: E501
     while answers[2] is True and counter < 3:
-        if game == brain_calc.brain_calc:
-            answers = ask.ask_for_calc()
-        elif game == brain_even.brain_even:
-            answers = ask.ask_to_user()
-        elif game == brain_gcd.brain_gcd:
-            answers = ask.GCD()
-        elif game == brain_prime.brain_prime:
-            answers = ask.is_prime()
-        elif game == brain_progression.brain_progression:
-            answers = ask.progression()
+        print('Correct!')
+        QUESTION_STRING, question, correct_answer = game()
+        print('Question: ' + question)
+        answer_of_user = prompt.string('You answer: ')
+        answers = [str(correct_answer), str(answer_of_user)]
+        if answers[1] == answers[0]:
+            answers.append(True)
+        else:
+            answers.append(False)
         counter += 1
         if answers[2] is True and counter >= 3:
-            print("Congretulations, " + name + "!")
+            print("Correct!\nCongretulations, " + name + "!")
         elif answers[2] is False:
             print("'{}' is wrong answer ;(. Correct answer was '{}'.\nLet's try again, {}!".format(answers[1], answers[0], name))  # noqa: E501

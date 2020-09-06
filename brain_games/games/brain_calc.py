@@ -1,16 +1,21 @@
-#!/usr/bin/env python3
-
-
 # -*- coding: utf-8 -*-
 
 
-from brain_games import first_greet
-from brain_games import cli
-from brain_games import ask
+from random import choice
+from random import randint
 
 
 def brain_calc():
-    first_greet.greet_for_calc()
-    name = cli.welcome_user()
-    answers = ask.ask_for_calc()
-    return name, answers
+    QUESTION_STRING = 'What is the result of the expression?\n'
+    a = randint(0, 100)
+    b = randint(0, 100)
+    operator = [' + ', ' - ', ' * ']
+    our_operator = choice(operator)
+    question = str(a) + our_operator + str(b)
+    if our_operator == ' + ':
+        correct_answer = a + b
+    elif our_operator == ' - ':
+        correct_answer = a - b
+    elif our_operator == ' * ':
+        correct_answer = a * b
+    return QUESTION_STRING, question, correct_answer

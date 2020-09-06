@@ -1,16 +1,15 @@
-#!/usr/bin/env python3
-
-
 # -*- coding: utf-8 -*-
 
 
-from brain_games import first_greet
-from brain_games import cli
-from brain_games import ask
+from random import randint
 
 
 def brain_even():
-    first_greet.greet_for_even()
-    name = cli.welcome_user()
-    answers = ask.ask_to_user()
-    return name, answers
+    QUESTION_STRING = 'Answer "yes" if number even otherwise "no".\n'
+    x = randint(0, 100)
+    if x % 2 == 0:
+        correct_answer = 'yes'
+    elif x % 2 > 0:
+        correct_answer = 'no'
+    question = str(x)
+    return QUESTION_STRING, question, correct_answer

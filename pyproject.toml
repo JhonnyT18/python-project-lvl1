@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "JhonnyT18_brain_games"
-version = "0.7.4"
+version = "0.7.5"
 description = "It is my first project calls brain-games. There you can play some games and check your math abilities."
 authors = ["Evgenii T"]
 repository = "https://github.com/JhonnyT18/python-project-lvl1"

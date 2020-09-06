@@ -4,11 +4,12 @@
 # -*- coding: utf-8 -*-
 
 
-from brain_games.games import brain_games
+from brain_games import cli
 
 
 def main():
-    brain_games.brain_games()
+    print('Welcome to the Brain Games!\n')
+    cli.welcome_user()
 
 
 if __name__ == '__main__':

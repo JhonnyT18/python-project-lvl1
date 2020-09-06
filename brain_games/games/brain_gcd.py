@@ -1,16 +1,18 @@
-#!/usr/bin/env python3
-
-
 # -*- coding: utf-8 -*-
 
 
-from brain_games import first_greet
-from brain_games import cli
-from brain_games import ask
+from random import randint
 
 
 def brain_gcd():
-    first_greet.greet_for_gcd()
-    name = cli.welcome_user()
-    answers = ask.GCD()
-    return name, answers
+    QUESTION_STRING = 'Find the greatest common divisor of given numbers.\n'
+    a = randint(0, 100)
+    b = randint(0, 100)
+    question = '{} {}'.format(a, b)
+    while a != 0 and b != 0:
+        if a > b:
+            a %= b
+        else:
+            b %= a
+    correct_answer = a + b
+    return QUESTION_STRING, question, correct_answer

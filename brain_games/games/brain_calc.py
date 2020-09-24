@@ -5,17 +5,19 @@ from random import choice
 from random import randint
 
 
-def brain_calc():
-    QUESTION_STRING = 'What is the result of the expression?\n'
-    a = randint(0, 100)
-    b = randint(0, 100)
-    operator = [' + ', ' - ', ' * ']
-    our_operator = choice(operator)
-    question = str(a) + our_operator + str(b)
-    if our_operator == ' + ':
-        correct_answer = a + b
-    elif our_operator == ' - ':
-        correct_answer = a - b
-    elif our_operator == ' * ':
-        correct_answer = a * b
-    return QUESTION_STRING, question, correct_answer
+GAME_DESCRIPTION = 'What is the result of the expression?'
+
+
+def get_data_for_game():
+    first_number = randint(0, 100)
+    second_number = randint(0, 100)
+    operators = [' + ', ' - ', ' * ']
+    current_operator = choice(operators)
+    question = str(first_number) + current_operator + str(second_number)
+    if current_operator == ' + ':
+        correct_answer = first_number + second_number
+    elif current_operator == ' - ':
+        correct_answer = first_number - second_number
+    elif current_operator == ' * ':
+        correct_answer = first_number * second_number
+    return question, str(correct_answer)

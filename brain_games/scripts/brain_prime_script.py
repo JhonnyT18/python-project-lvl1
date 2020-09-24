@@ -4,12 +4,12 @@
 # -*- coding: utf-8 -*-
 
 
-from brain_games import dvizok
-from brain_games.games.brain_prime import brain_prime
+from brain_games.dvizok import play_game
+from brain_games.games import brain_prime
 
 
 def main():
-    dvizok.play_game(brain_prime)
+    play_game(brain_prime)
 
 
 if __name__ == '__main__':

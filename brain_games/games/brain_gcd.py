@@ -4,15 +4,22 @@
 from random import randint
 
 
-def brain_gcd():
-    QUESTION_STRING = 'Find the greatest common divisor of given numbers.\n'
-    a = randint(0, 100)
-    b = randint(0, 100)
-    question = '{} {}'.format(a, b)
-    while a != 0 and b != 0:
-        if a > b:
-            a %= b
+GAME_DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+
+
+def make_answer_for_gcd(first_number, second_number):
+    while first_number != 0 and second_number != 0:
+        if first_number > second_number:
+            first_number %= second_number
         else:
-            b %= a
-    correct_answer = a + b
-    return QUESTION_STRING, question, correct_answer
+            second_number %= first_number
+    correct_answer = first_number + second_number
+    return correct_answer
+
+
+def get_data_for_game():
+    first_number = randint(0, 100)
+    second_number = randint(0, 100)
+    question = '{} {}'.format(first_number, second_number)
+    correct_answer = make_answer_for_gcd(first_number, second_number)
+    return question, str(correct_answer)

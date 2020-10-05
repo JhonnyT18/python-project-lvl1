@@ -5,11 +5,11 @@
 
 
 from brain_games.dvizok import play_game
-from brain_games.games import brain_gcd
+from brain_games.games import prime
 
 
 def main():
-    play_game(brain_gcd)
+    play_game(prime)
 
 
 if __name__ == '__main__':

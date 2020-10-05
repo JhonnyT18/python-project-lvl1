@@ -5,11 +5,11 @@
 
 
 from brain_games.dvizok import play_game
-from brain_games.games import brain_even
+from brain_games.games import progression
 
 
 def main():
-    play_game(brain_even)
+    play_game(progression)
 
 
 if __name__ == '__main__':

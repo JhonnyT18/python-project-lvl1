@@ -4,12 +4,12 @@
 # -*- coding: utf-8 -*-
 
 
-from brain_games import cli
+from brain_games.dvizok import play_game
+from brain_games.games import calc
 
 
 def main():
-    print('Welcome to the Brain Games!\n')
-    cli.welcome_user()
+    play_game(calc)
 
 
 if __name__ == '__main__':

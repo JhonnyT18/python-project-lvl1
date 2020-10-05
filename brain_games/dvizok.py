@@ -2,7 +2,6 @@
 
 
 import prompt
-from brain_games import cli
 
 
 def play_game(game):
@@ -10,29 +9,23 @@ def play_game(game):
     question, correct_answer = game.get_data_for_game()
     print(game.GAME_DESCRIPTION)
     print()
-    name = cli.welcome_user()
+    name = prompt.string('May I have your name? ')
+    print('Hello, {}!\n'.format(name))
     print('Question: ' + question)
-    answer_of_user = prompt.string('You answer: ')
-    if answer_of_user == correct_answer:
-        answer_is_right = True
-    else:
-        answer_is_right = False
+    answer_of_user = prompt.string('Your answer: ')
     counter = 1
-    if answer_is_right is False:
+    if answer_of_user != correct_answer:
         print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer_of_user, correct_answer))  # noqa: E501
         print("Let's try again, {}!".format(name))
-    while answer_is_right is True and counter < 3:
+    quantity_right_answers_to_get_congratulations = 3
+    while answer_of_user == correct_answer and counter < quantity_right_answers_to_get_congratulations:  # noqa: E501
         print('Correct!')
         question, correct_answer = game.get_data_for_game()
         print('Question: ' + question)
-        answer_of_user = prompt.string('You answer: ')
-        if answer_of_user == correct_answer:
-            answer_is_right = True
-        else:
-            answer_is_right = False
+        answer_of_user = prompt.string('Your answer: ')
         counter += 1
-        if answer_is_right is True and counter >= 3:
-            print("Correct!\nCongretulations, " + name + "!")
-        elif answer_is_right is False:
+        if answer_of_user == correct_answer and counter >= quantity_right_answers_to_get_congratulations:  # noqa: E501
+            print("Correct!\nCongratulations, " + name + "!")
+        elif answer_of_user != correct_answer:
             print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer_of_user, correct_answer))  # noqa: E501
             print("Let's try again, {}!".format(name))

@@ -4,14 +4,19 @@
 [![Build Status](https://travis-ci.com/JhonnyT18/python-project-lvl1.svg?branch=master)](https://travis-ci.com/JhonnyT18/python-project-lvl1)
 
 
-#### Welcome to Brain games!
+#### Welcome to the Brain games!
 This repository contains 5 math games named calc, even, gcd, prime and progression. Here you can test your math skills.
 
 
+#### Install
 For install "Brain-games" you should use a command: pip install -i https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple jhonnyt18-brain-games
+
+
+#### Using
 For play any game you should use a comand: brain-name of game.
 
 
+#### Examples
 *#example of install:*
 https://asciinema.org/a/2x33bXgTcJChWYg0rEgFsL1pY
 

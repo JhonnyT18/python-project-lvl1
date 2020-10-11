@@ -4,7 +4,7 @@
 # -*- coding: utf-8 -*-
 
 
-from brain_games.dvizok import play_game
+from brain_games.engine import play_game
 from brain_games.games import gcd
 
 

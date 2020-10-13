@@ -14,10 +14,10 @@ def get_data_for_game():
     operators = ['+', '-', '*']
     current_operator = choice(operators)
     question = "{} {} {}".format(str(first_number), current_operator, str(second_number))  # noqa: E501
-    if current_operator == operators[0]:
+    if current_operator == '+':
         correct_answer = first_number + second_number
-    elif current_operator == operators[1]:
+    elif current_operator == '-':
         correct_answer = first_number - second_number
-    elif current_operator == operators[2]:
+    elif current_operator == '*':
         correct_answer = first_number * second_number
     return question, str(correct_answer)
